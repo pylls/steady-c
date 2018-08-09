@@ -4,7 +4,7 @@ the device that generate log events.
 For the relay and collector, [see the Go repository](https://github.com/pylls/steady).
 The go repository also contains further documentation.
 
-## Brief instructions to compile
+### Brief instructions to compile
 1. clone this repository
 2. install [libsodium](https://libsodium.org)
 3. run make
