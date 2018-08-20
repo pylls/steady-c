@@ -5,6 +5,9 @@ all: demo
 demo: demo.c lib
 	gcc -std=c11 -Wall -O3 -o demo demo.c libsteady.a liblz4.a -lm -lpthread -lsodium
 
+mini: mini.c lib
+	gcc -std=c11 -Wall -O3 -o mini mini.c libsteady.a liblz4.a -lm -lsodium
+
 test: test.c crypto.o memory.o policy.o block.o liblz4.a compress.o
 	gcc -std=c11 -Wall -O3 -o test test.c libsteady.a liblz4.a -lm -lpthread -lsodium
 	./test
