@@ -228,7 +228,7 @@ void steady_send_block(steady_mini_device *device, uint64_t block_size) {
 
     // make sure the block index is authenticated by the server
     steady_khash3(auth, device->token, device->token_len,
-      (unsigned char *)"writeN", 6, device->policy.id, steady_identifier_size,
+      (unsigned char *)"write", 5, device->policy.id, steady_identifier_size,
       device->mem_block, 8);
     if (strncmp((const char *)(reply+8), (const char *)auth, steady_wire_auth_size) != 0) {
       printf("authentication error, this should never happen...we try to reconnect\n");

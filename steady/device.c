@@ -335,7 +335,7 @@ void *steady_thread_send(void *x) {
         while (steady_connect(device) < 0) {}
       }
 
-      // send writeN command
+      // send write command
       if (steady_really_send(device->socket, &buffer, 4+steady_identifier_size) < 0)
         continue; // errno will be set, triggering re-connect above
 
@@ -357,7 +357,7 @@ void *steady_thread_send(void *x) {
 
       // make sure the block index is authenticated by the server
       steady_khash3(auth, device->token, device->token_len,
-        (unsigned char *)"writeN", 6, device->policy.id, steady_identifier_size, blocks[num_blocks-1].data, 8);
+        (unsigned char *)"write", 5, device->policy.id, steady_identifier_size, blocks[num_blocks-1].data, 8);
       if (strncmp((const char *)(reply+8), (const char *)auth, steady_wire_auth_size) != 0) {
         printf("authentication error, this should never happen...we try to reconnect\n");
         errno = EPIPE;
