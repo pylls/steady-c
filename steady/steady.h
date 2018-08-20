@@ -11,7 +11,6 @@
 #define steady_wire_cmd_setup  0x1
 #define steady_wire_cmd_read   0x2
 #define steady_wire_cmd_write  0x3
-#define steady_wire_cmd_write_n  0x4
 #define steady_wire_true  0x1
 #define steady_wire_false 0x0
 #define steady_wire_more 0xA

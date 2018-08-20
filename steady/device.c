@@ -311,7 +311,7 @@ void *steady_thread_send(void *x) {
   struct steady_block blocks[steady_device_block_ptr_num]; // blocks to send
   uint16_t num_blocks; // the number of blocks to send
   unsigned char reply[8+steady_wire_auth_size], auth[steady_hash_size]; // the reply from the relay
-  unsigned char buffer[2+steady_identifier_size+2] = {steady_wire_version,steady_wire_cmd_write_n};
+  unsigned char buffer[2+steady_identifier_size+2] = {steady_wire_version,steady_wire_cmd_write};
   memcpy(buffer+2, device->policy.id, steady_identifier_size); // buffer is the steady protocol to send
 
   pthread_mutex_lock(&device->mutex_send);
