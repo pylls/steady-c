@@ -14,7 +14,7 @@ The go repository also contains further documentation.
 Above should log "hello world" to the relay at 127.0.0.1 with 16 MiB of max device memory using
 encryption (1) and compression (1).
 
-### Paper (TODO)
+### Paper
 [https://eprint.iacr.org/2018/737](https://eprint.iacr.org/2018/737)
 
 ### License
