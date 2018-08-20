@@ -15,7 +15,7 @@ Above should log "hello world" to the relay at 127.0.0.1 with 16 MiB of max devi
 encryption (1) and compression (1).
 
 ### Paper (TODO)
-[https://eprint.iacr.org/xxxx/xxx](https://eprint.iacr.org/xxxx/xxx)
+[https://eprint.iacr.org/2018/737](https://eprint.iacr.org/2018/737)
 
 ### License
 Apache 2.0
