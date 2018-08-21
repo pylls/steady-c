@@ -61,8 +61,7 @@ uint64_t steady_make_payload(unsigned char *payload, uint64_t payload_max_size,
     }
 
     // calculate root_hash
-    steady_khash2(root_hash, p->id, steady_identifier_size,
-      root_hash, steady_hash_size, iv, steady_iv_size);
+    steady_khash(root_hash, iv, steady_iv_size, root_hash, steady_hash_size);
 
     // calculate payload_hash
     steady_khash(payload_hash, p->id, steady_identifier_size, payload, payload_size);
